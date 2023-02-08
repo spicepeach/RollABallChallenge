@@ -339,6 +339,8 @@
 "Assets/Scripts/CameraController.cs"
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/Rotater.cs"
+"Assets/Scripts/SceneLoader.cs"
+"Assets/Scripts/Slider.cs"
 -langversion:9.0
 
 /deterministic

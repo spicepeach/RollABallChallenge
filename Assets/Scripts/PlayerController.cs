@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class PlayerController : MonoBehaviour
 	public TextMeshProUGUI countText;
 	public TextMeshProUGUI livesText;
 	public GameObject winTextObject;
+	public GameObject loseTextObject;
+	public GameObject playAgainButton;
 
 	private float movementX;
 	private float movementY;
@@ -35,6 +38,8 @@ public class PlayerController : MonoBehaviour
 
 		// Set the text property of the Win Text UI to an empty string, making the 'You Win' (game over message) blank
 		winTextObject.SetActive(false);
+		loseTextObject.SetActive(false);
+		playAgainButton.SetActive(false);
 	}
 
 	void FixedUpdate()
@@ -66,9 +71,6 @@ public class PlayerController : MonoBehaviour
 			// Add one to the score variable 'count'
 			lives = lives - 1;
 			SetLivesText();
-
-			// Run the 'SetCountText()' function (see below)
-			SetCountText();
 		}
 	}
 
@@ -84,15 +86,25 @@ public class PlayerController : MonoBehaviour
 	{
 		countText.text = "Count: " + count.ToString();
 
-		if (count >= 12)
+		if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("MiniGame") && count >= 12)
 		{
-			// Set the text value of your 'winText'
-			winTextObject.SetActive(true);
+			SceneManager.LoadScene("Level2");
 		}
+		else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level2") && count >= 15)
+        {
+			winTextObject.SetActive(true);
+        }
 	}
 
 	void SetLivesText()
     {
 		livesText.text = "Lives: " + lives.ToString();
+
+		if (lives <= 0)
+        {
+			loseTextObject.SetActive(true);
+			playAgainButton.SetActive(true);
+			//Destroy(gameObject);
+        }
 	}
 }
