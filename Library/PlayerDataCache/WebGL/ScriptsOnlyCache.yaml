@@ -80,6 +80,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: SceneLoader
     methodName: LoadScene
+  - assembly: Assembly-CSharp
+    fullTypeName: SceneLoader
+    methodName: LoadScene
   sceneClasses:
     Assets/Scenes/Level2.unity:
     - Class: 1
@@ -115,11 +118,15 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 1598}
+    - Class: 114
       Script: {instanceID: 1602}
     - Class: 114
       Script: {instanceID: 2756}
     - Class: 114
       Script: {instanceID: 2990}
+    - Class: 114
+      Script: {instanceID: 3318}
     - Class: 114
       Script: {instanceID: 3884}
     - Class: 114
@@ -127,19 +134,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4080}
     - Class: 114
-      Script: {instanceID: 5648}
+      Script: {instanceID: 4468}
     - Class: 114
-      Script: {instanceID: 6312}
+      Script: {instanceID: 5650}
     - Class: 114
-      Script: {instanceID: 6486}
+      Script: {instanceID: 6314}
     - Class: 114
-      Script: {instanceID: 7302}
+      Script: {instanceID: 6488}
     - Class: 114
-      Script: {instanceID: 8094}
+      Script: {instanceID: 7304}
     - Class: 114
-      Script: {instanceID: 8218}
+      Script: {instanceID: 7758}
     - Class: 114
-      Script: {instanceID: 26304}
+      Script: {instanceID: 8098}
+    - Class: 114
+      Script: {instanceID: 8222}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -149,6 +158,8 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -210,23 +221,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4080}
     - Class: 114
-      Script: {instanceID: 4512}
+      Script: {instanceID: 4514}
     - Class: 114
-      Script: {instanceID: 4818}
+      Script: {instanceID: 4820}
     - Class: 114
-      Script: {instanceID: 5648}
+      Script: {instanceID: 5650}
     - Class: 114
-      Script: {instanceID: 6312}
+      Script: {instanceID: 6314}
     - Class: 114
-      Script: {instanceID: 6486}
+      Script: {instanceID: 6488}
     - Class: 114
-      Script: {instanceID: 7302}
+      Script: {instanceID: 7304}
     - Class: 114
-      Script: {instanceID: 8094}
+      Script: {instanceID: 7758}
     - Class: 114
-      Script: {instanceID: 8218}
+      Script: {instanceID: 8098}
     - Class: 114
-      Script: {instanceID: 48704}
+      Script: {instanceID: 8222}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -674,6 +685,12 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 0683931e1b743caecf04910881fefb5b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Slider
+  - hash:
+      serializedVersion: 2
       Hash: 0fb27be807aa299702f28ad0bcad1f46
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1083,6 +1100,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SceneLoader
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSubmitMessageListener
@@ -1212,20 +1235,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 0683931e1b743caecf04910881fefb5b
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Slider
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SceneLoader
   platform: 20
   scenePathNames:
   - Assets/Scenes/MiniGame.unity
   - Assets/Scenes/Level2.unity
-  playerPath: C:/Users/alexk/Downloads/CAAM/WebBuildChal
+  playerPath: C:/Users/alexk/Downloads/CAAM/WebBuildChallenge

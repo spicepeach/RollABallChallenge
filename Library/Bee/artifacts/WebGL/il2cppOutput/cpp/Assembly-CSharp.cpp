@@ -2289,7 +2289,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_SetCountText_m6A9F5CF28
 
 IL_004b:
 	{
-		// else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level2") && count >= 15)
+		// else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level2") && count >= 11)
 		il2cpp_codegen_runtime_class_init_inline(SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
 		Scene_tA1DC762B79745EB5140F054C884855B922318356 L_8;
 		L_8 = SceneManager_GetActiveScene_m0B320EC4302F51A71495D1CCD1A0FF9C2ED1FDC8(NULL);
@@ -2299,23 +2299,30 @@ IL_004b:
 		L_10 = Scene_op_Equality_m9FC9CA5FAE2FF94568EC2AB878B64ED8DC53CF68(L_8, L_9, NULL);
 		if (!L_10)
 		{
-			goto IL_0077;
+			goto IL_008f;
 		}
 	}
 	{
 		int32_t L_11 = __this->___count_13;
-		if ((((int32_t)L_11) < ((int32_t)((int32_t)15))))
+		if ((((int32_t)L_11) < ((int32_t)((int32_t)11))))
 		{
-			goto IL_0077;
+			goto IL_008f;
 		}
 	}
 	{
 		// winTextObject.SetActive(true);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_12 = __this->___winTextObject_7;
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_12, (bool)1, NULL);
+		// playAgainButton.SetActive(true);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_13 = __this->___playAgainButton_9;
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_13, (bool)1, NULL);
+		// this.gameObject.SetActive(false);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_14;
+		L_14 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_14, (bool)0, NULL);
 	}
 
-IL_0077:
+IL_008f:
 	{
 		// }
 		return;
@@ -2343,7 +2350,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_SetLivesText_mF798EC26D
 		int32_t L_4 = __this->___lives_14;
 		if ((((int32_t)L_4) > ((int32_t)0)))
 		{
-			goto IL_0041;
+			goto IL_004d;
 		}
 	}
 	{
@@ -2353,9 +2360,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_SetLivesText_mF798EC26D
 		// playAgainButton.SetActive(true);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6 = __this->___playAgainButton_9;
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_6, (bool)1, NULL);
+		// this.gameObject.SetActive(false);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_7;
+		L_7 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_7, (bool)0, NULL);
 	}
 
-IL_0041:
+IL_004d:
 	{
 		// }
 		return;

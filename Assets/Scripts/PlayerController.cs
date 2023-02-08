@@ -90,9 +90,11 @@ public class PlayerController : MonoBehaviour
 		{
 			SceneManager.LoadScene("Level2");
 		}
-		else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level2") && count >= 15)
+		else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level2") && count >= 11)
         {
 			winTextObject.SetActive(true);
+			playAgainButton.SetActive(true);
+			this.gameObject.SetActive(false);
         }
 	}
 
@@ -104,7 +106,7 @@ public class PlayerController : MonoBehaviour
         {
 			loseTextObject.SetActive(true);
 			playAgainButton.SetActive(true);
-			//Destroy(gameObject);
+			this.gameObject.SetActive(false);
         }
 	}
 }
